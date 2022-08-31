@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Chess time!</title>
+</head>
+<body>
+    <h1>***Checkerboard***</h1>
+    <table class = "board">
+        {% for i in range (0,row) %}
+        <tr>
+            {% for j in range (0, column) %}
+                {% if (i+j)%2 == 0 %}
+                    <td class = "box" style="background-color:{{color1}};"></td> <!-- como hago para que pueda cambiar toda la clase de css y no solo el background color? -->
+                {% else %}
+                    <td class = "box" style="background-color: {{color2}};"></td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
+
+<!-- Llegamos a otra solucion en la ayudantía definiendo el color segun si era par o impar e igual con las filas pero era mas dificl pasarle los argumentos entonces la simplifique a esta -->
