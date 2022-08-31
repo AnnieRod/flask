@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        h1, h2{
+        h1, h2, a{
             text-align: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
@@ -21,7 +21,6 @@
             height: 200px;
             width: 200px;
             border: 2px solid black;
-
         }
     </style>
     <title>Playground</title>
@@ -29,11 +28,15 @@
 </head>
 <body>
     <h1>Welcome to Playground!</h1>
+    {% if level is not defined %}
+        <a href="/play">Play now</a>
+    {% else  %}
     <h2>Level: {{ level }} </h2>
     <div class="parent-box">
         {% for i in range (0,count) %}
             <div class = "box" style="background-color:{{color}};"></div>
         {% endfor %}
+    {%endif%}
 
 </body>
 </html>

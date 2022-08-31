@@ -3,9 +3,9 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 # home ¿Como mostrar un div vacio o solo el H1 al entrar a la pagina inicial? 
-# @app.route ('/')
-# def Welcome():
-#     return render_template('index.html')
+@app.route ('/')
+def Welcome():
+    return render_template('index.html')
 
 #Nivel 1
 @app.route ('/play')
