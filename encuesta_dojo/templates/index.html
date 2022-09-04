@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Encuesta Dojo</title>
+</head>
+<body>
+    <div class="container w-50 mt-5 p-4 bg-dark text-light">
+        <h1 class="text-warning">Dojo Survey</h1>
+        <form action="/process" method="post">
+            <div class="form-group">
+                <label for="name_input">Name:</label>
+                <input type="text" class="form-control" id= "name_input" name="name" placeholder="Your name here . . .">
+            </div>
+            <div class="form-group">
+                <label for="location_dojo">Dojo Location:</label>
+                <select class="form-control" id="location_dojo" name="location">
+                    <option selected>-- Select a Location --</option>
+                    <option>Chicago</option>
+                    <option>Seattle</option>
+                    <option>Online</option>
+                    <option>Burbank</option>
+                    <option>Bellevue</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fav_language">Favorite Language:</label>
+                <select class="form-control" id="fav_language" name="language">
+                    <option selected>-- Select a Language --</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>C#</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea class="form-control" id="comments" name = "comments" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
