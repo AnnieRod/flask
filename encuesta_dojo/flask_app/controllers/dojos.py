@@ -28,3 +28,6 @@ def show_student(id):
         "id": id
     }
     return render_template("show.html", dojos = Dojo.one_dojo(data))
+
+if __name__ == "__main__":
+    app.run(debug=True)
